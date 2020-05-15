@@ -1,7 +1,7 @@
 <template>
   <div class="m-header">
     <div class="icon"></div>
-    <h1 class="text">六个周 Music</h1>
+    <h1 class="text">Music音乐</h1>
     <router-link to="/user" class="mine" tag="div">
       <i class="icon-mine"></i>
     </router-link>
@@ -28,7 +28,7 @@
       height :32px
       margin-right:9px
       bg-image('logo')
-      background-size :30px 32px
+      background-size :32px 32px
     .text
       display :inline-block
       vertical-align :top

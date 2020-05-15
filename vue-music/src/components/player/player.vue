@@ -436,11 +436,7 @@
           this.playingLyric = ''
           this.currentLineNum = 0
         }
-        clearTimeout(this.timer)
-        this.timer = setTimeout(()=> {
-          this.$refs.audio.play()
-          this.getLyric()
-        },1000)
+       
       },
       playing(newPlaying) {
         const audio = this.$refs.audio

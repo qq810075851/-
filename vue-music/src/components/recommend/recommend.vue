@@ -46,7 +46,7 @@
     mixins: [playlistMixin],
     data () {
       return {
-        recommends:[],
+        recommends:[], // 轮播图数据
         discList:[]
       }
     },
@@ -72,14 +72,15 @@
           this.$refs.scroll.refresh()
         }
        },
-      _getRecommend() {
+      _getRecommend() {  //请求拿到轮播图数据
         getRecommend().then((res) => {
           if(res.code === ERR_OK){
             this.recommends = res.data.slider
+			console.log(this.recommends)
           }
         })
       },
-      _getDiscList() {
+      _getDiscList() { //歌单列表数据
         getDiscList().then((res) => {
           if(res.code === ERR_OK){
             this.discList = res.data.list

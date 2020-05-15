@@ -3,7 +3,7 @@ import {commonParams, options} from './config'
 import axios from 'axios'
 
 const debug = process.env.NODE_ENV !== 'production'
-export function getRecommend() {
+export function getRecommend() { //封装推荐 页面的轮播图数据
   const url = 'https://c.y.qq.com/musichall/fcgi-bin/fcg_yqqhomepagerecommend.fcg'
 
   const data = Object.assign({}, commonParams, {
@@ -15,7 +15,7 @@ export function getRecommend() {
   return jsonp(url, data, options)
 }
 
-export function getDiscList() {
+export function getDiscList() {  //歌单列表数据
   const url = '/api/getDiscList'
   const data = Object.assign({}, commonParams, {
     platform: 'yqq',

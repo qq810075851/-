@@ -31,6 +31,13 @@
         type: Boolean,
         default: false
       },
+		/**
+		 * 是否开启无限循环轮播
+		 */
+		snapLoop: {
+		  type: Boolean,
+		  default: true
+		},
       /**
        * 是否派发滚动事件
        */

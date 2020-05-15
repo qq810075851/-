@@ -22,10 +22,6 @@
       }
     },
     props:{
-      loop:{
-        type: Boolean,
-        default:true
-      },
       autoPlay:{
         type: Boolean,
         default:true
@@ -33,7 +29,8 @@
       interval:{
         type: Number,
         default:4000
-      }
+      },
+	  
     },
     mounted () {
       setTimeout(() => {
@@ -86,7 +83,6 @@
         this.slider.on('scrollEnd', () => {
           let pageIndex = this.slider.getCurrentPage().pageX
           if(this.loop){
-            pageIndex -=1
           }
           this.currentPageIndex = pageIndex
 
